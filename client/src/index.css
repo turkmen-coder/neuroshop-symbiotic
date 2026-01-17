@@ -43,8 +43,8 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
+  --primary: oklch(0.55 0.25 280); /* Mor - AI vurgusu */
+  --primary-foreground: oklch(0.98 0.005 280);
   --sidebar-primary: var(--color-blue-600);
   --sidebar-primary-foreground: var(--color-blue-50);
   --chart-1: var(--color-blue-300);
@@ -59,11 +59,11 @@
   --card-foreground: oklch(0.235 0.015 65);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
+  --secondary: oklch(0.65 0.20 240); /* Mavi - Güven */
+  --secondary-foreground: oklch(0.98 0.005 240);
   --muted: oklch(0.967 0.001 286.375);
   --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
+  --accent: oklch(0.75 0.25 300); /* Parlak mor - Aksiyon */
   --accent-foreground: oklch(0.141 0.005 285.823);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
@@ -174,4 +174,111 @@
       max-width: 1280px; /* Standard content width */
     }
   }
+}
+
+/* Sembiyotik Zeka Özel Stiller */
+
+/* Neural glow effect */
+@keyframes neural-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.neural-glow {
+  box-shadow: 0 0 20px oklch(0.55 0.25 280 / 0.5);
+  animation: neural-pulse 3s ease-in-out infinite;
+}
+
+/* Memory card effect */
+.memory-card {
+  @apply bg-card border border-border rounded-lg p-4;
+  background: linear-gradient(135deg, oklch(1 0 0) 0%, oklch(0.967 0.001 286.375) 100%);
+  backdrop-filter: blur(10px);
+}
+
+/* Trust indicator */
+.trust-indicator {
+  @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium;
+  background: linear-gradient(90deg, oklch(0.65 0.20 150 / 0.2) 0%, oklch(0.65 0.20 150 / 0.1) 100%);
+  border: 1px solid oklch(0.65 0.20 150 / 0.3);
+  color: oklch(0.65 0.20 150);
+}
+
+/* XAI reasoning card */
+.xai-card {
+  @apply bg-card/50 border border-primary/30 rounded-lg p-4;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px oklch(0.55 0.25 280 / 0.1);
+}
+
+/* Spatial canvas */
+.spatial-canvas {
+  @apply relative w-full h-full bg-background/50;
+  background-image: 
+    linear-gradient(oklch(0.92 0.004 286.32) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0.92 0.004 286.32) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Canvas artifact */
+.canvas-artifact {
+  @apply absolute bg-card border border-border rounded-lg shadow-lg;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.canvas-artifact:hover {
+  @apply border-primary shadow-2xl;
+  transform: translateY(-4px);
+}
+
+/* Price alert badge */
+.price-alert {
+  @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold;
+  animation: bounce 1s infinite;
+}
+
+/* Maturity level indicator */
+.maturity-level {
+  @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium;
+}
+
+.maturity-level.tool {
+  @apply bg-muted/50 text-muted-foreground;
+}
+
+.maturity-level.copilot {
+  @apply bg-secondary/20 text-secondary border border-secondary/30;
+}
+
+.maturity-level.partner {
+  @apply bg-primary/20 text-primary border border-primary/30;
+  box-shadow: 0 0 20px oklch(0.55 0.25 280 / 0.3);
+}
+
+/* Personality trait bar */
+.trait-bar {
+  @apply relative h-2 bg-muted rounded-full overflow-hidden;
+}
+
+.trait-bar-fill {
+  @apply absolute left-0 top-0 h-full rounded-full;
+  background: linear-gradient(90deg, oklch(0.55 0.25 280) 0%, oklch(0.75 0.25 300) 100%);
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Glassmorphism */
+.glass {
+  @apply bg-card/30 backdrop-blur-xl border border-border/50;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(135deg, oklch(0.55 0.25 280) 0%, oklch(0.75 0.25 300) 100%);
 }

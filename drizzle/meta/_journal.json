@@ -1,5 +1,13 @@
 {
   "version": "7",
   "dialect": "mysql",
-  "entries": []
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1768679122834,
+      "tag": "0000_clammy_wilson_fisk",
+      "breakpoints": true
+    }
+  ]
 }

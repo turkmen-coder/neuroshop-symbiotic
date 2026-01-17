@@ -1,0 +1,9 @@
+{
+  "query": "DROP TABLE IF EXISTS action_guards;\nDROP TABLE IF EXISTS recommendation_explanations;\nDROP TABLE IF EXISTS canvas_artifacts;\nDROP TABLE IF EXISTS budget_tracking;\nDROP TABLE IF EXISTS conditional_delegations;\nDROP TABLE IF EXISTS price_predictions;\nDROP TABLE IF EXISTS price_alerts;\nDROP TABLE IF EXISTS price_history;\nDROP TABLE IF EXISTS price_watch_list;\nDROP TABLE IF EXISTS behavior_metrics;\nDROP TABLE IF EXISTS user_personality_profiles;\nDROP TABLE IF EXISTS user_maturity_level;\nDROP TABLE IF EXISTS conversation_context;\nDROP TABLE IF EXISTS archival_memory;\nDROP TABLE IF EXISTS recall_memory;\nDROP TABLE IF EXISTS core_memory;\nDROP TABLE IF EXISTS users;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3U5ZCgidHKKMShr.0ca603be827c --database T8Nec6cLCEagzVsQ3BVbMy --execute DROP TABLE IF EXISTS action_guards;\nDROP TABLE IF EXISTS recommendation_explanations;\nDROP TABLE IF EXISTS canvas_artifacts;\nDROP TABLE IF EXISTS budget_tracking;\nDROP TABLE IF EXISTS conditional_delegations;\nDROP TABLE IF EXISTS price_predictions;\nDROP TABLE IF EXISTS price_alerts;\nDROP TABLE IF EXISTS price_history;\nDROP TABLE IF EXISTS price_watch_list;\nDROP TABLE IF EXISTS behavior_metrics;\nDROP TABLE IF EXISTS user_personality_profiles;\nDROP TABLE IF EXISTS user_maturity_level;\nDROP TABLE IF EXISTS conversation_context;\nDROP TABLE IF EXISTS archival_memory;\nDROP TABLE IF EXISTS recall_memory;\nDROP TABLE IF EXISTS core_memory;\nDROP TABLE IF EXISTS users;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 7150
+}
