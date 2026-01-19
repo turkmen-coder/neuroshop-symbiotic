@@ -1,3 +1,4 @@
+<img width="2752" height="1536" alt="image" src="https://github.com/user-attachments/assets/3963b05c-4699-4e83-89fd-cc577b8695d4" />
 # 🧠 NeuroShop - Symbiotic Intelligence E-Commerce Platform
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue)](https://www.typescriptlang.org/)
